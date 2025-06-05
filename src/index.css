@@ -17,3 +17,10 @@
   --color-text: #fafafa;
   --color-input: #f5f5f5;
 }
+
+body {
+  min-height: 100vh;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
