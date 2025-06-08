@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 const CathegorySideBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const categories = [
     "Woman's Fashion",
     "Men's Fashion",
@@ -9,19 +13,30 @@ const CathegorySideBar = () => {
     "Grocery & Pets",
     "Health & Beauty",
   ];
+
   return (
-    <div className="border-r border-r-text1">
-      <nav className="flex flex-col  w-[300px] mt-20">
+    <div className="md:border-r border-r-text1">
+      <div className="md:hidden flex justify-between items-center p-4">
+        <h2 className="text-lg font-semibold">Categories</h2>
+        <button onClick={() => setIsOpen(!isOpen)} className="text-xl">
+          ☰
+        </button>
+      </div>
+      <nav
+        className={`flex-col w-full md:w-[300px] mt-4 md:mt-20 ${
+          isOpen ? "flex" : "hidden"
+        } md:flex nav-cathegory`}
+      >
         {categories.map((cathegory, index) => (
           <li key={index} className="list-none">
             <a
               href="#"
-              className=" p-3 flex items-center gap-10  justify-between"
+              className="p-3 flex items-center justify-between hover:bg-gray-100"
             >
               {cathegory}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-[24px] w-[24px] "
+                className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"

@@ -1,9 +1,9 @@
+import CathegorySideBar from "./CathegorySidebar";
 import HeroSection from "./HeroSection";
-import CathegorySideBar from "./CathegorySideBar";
 
 const ShopSection = () => {
   return (
-    <main className="flex  px-30 justify-between">
+    <main className="flex px-30 justify-between shop-main">
       <CathegorySideBar />
       <HeroSection />
     </main>
