@@ -1,10 +1,16 @@
-import React from "react";
+import CathegorySideBar from "./components/CathegorySidebar";
+import FlashSales from "./components/FlashSales";
+import MainItems from "./components/MainItems";
 import NavBar from "./components/NavBar";
-
+import ShopSection from "./components/ShopSection";
 const App = () => {
   return (
-    <div>
+    <div className="">
       <NavBar />
+      <ShopSection />
+      <CathegorySideBar />
+      <FlashSales />
+      <MainItems />
     </div>
   );
 };
