@@ -18,11 +18,11 @@ const Items: React.FC<ItemCardProps> = ({
   rate,
 }) => {
   return (
-    <section className="border-2 border-blue-500 mt-10">
+    <section className="border-2 border-blue-500">
       <div>
         <div className="border-1 w-[270px] h-[250px] rounded overflow-hidden relative bg-text1">
           <div className="flex justify-between">
-            <div className="w-20 h-8 bg-secondary2  text-[16px] py-1 px-4 mx-3 my-3 rounded text-text">
+            <div className="w-20 h-8 bg-secondary2  text-[16px]  rounded text-text">
               -40%
             </div>
             <div className="flex flex-col mt-4 mr-4 gap-3">

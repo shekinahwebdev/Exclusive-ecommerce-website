@@ -1,4 +1,5 @@
-import vector from "/assets/Vector.png";
+import { useState } from "react";
+import vector from "/assets/arrow2.png";
 import searchIcon from "/assets/search-icon.png";
 import loveIcon from "/assets/love-icon.png";
 import cartIcon from "/assets/cart.png";
@@ -12,27 +13,59 @@ const NavBar = () => {
     { name: "Sign Up", href: "#" },
   ];
 
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedLang, setSelectedLang] = useState("English");
+
+  const languages = ["English", "French", "Spanish", "German"];
+
   return (
     <main>
-      <div className="text-center text-white bg-black p-2 md:p-4 flex flex-col md:flex-row justify-center md:justify-evenly items-center text-sm md:text-base gap-2">
-        <p>
-          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+      <div
+        className="text-white bg-black flex flex-row
+       justify-between  items-center gap-3 p-5 text-[17px]"
+      >
+        <p className="text-[10px]">
+          Summer Sale For All Swim Suits - OFF 50%!
           <span className="pl-1 font-bold underline cursor-pointer">
             ShopNow
           </span>
         </p>
-        <div className="flex items-center gap-2">
-          <p className="">English</p>
-          <img src={vector} alt="Vector" className="w-3 h-2" />
+        <div className="relative">
+          <div
+            className="flex items-center gap-[6px] cursor-pointer"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <p className="text-[14px]">{selectedLang}</p>
+            <img
+              src={vector}
+              alt="Dropdown arrow"
+              className="w-3 h-3 text-white"
+            />
+          </div>
+
+          {isOpen && (
+            <ul className="absolute mt-2 bg-black shadow-md border rounded text-sm z-10">
+              {languages.map((lang) => (
+                <li
+                  key={lang}
+                  onClick={() => {
+                    setSelectedLang(lang);
+                    setIsOpen(false);
+                  }}
+                  className="px-4 py-2 hover:bg-red-500 cursor-pointer"
+                >
+                  {lang}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
 
-      <section className="border-b-1 border-b-secondary2 flex flex-col md:flex-row md:justify-between md:items-center items-center md:px-30 text-center pt-6 pb-3 gap-4 md:gap-0 center-at-855">
-        <h2 className="text-[20px]  md:text-3xl font-bold text-center md:text-left">
-          Exclusive
-        </h2>
+      <section className="flex flex-row justify-between gap-3.5 p-2">
+        <h2 className="">Exclusive</h2>
 
-        <div>
+        <div className="hidden">
           <nav className="flex flex-row items-center gap-3 md:flex-row md:gap-6 text-[20px]">
             {navLinks.map((link, index) => (
               <a key={index} href={link.href} className="hover:underline">
@@ -42,32 +75,34 @@ const NavBar = () => {
           </nav>
         </div>
 
-        <div className="flex flex-row md:flex-row items-center gap-5 mt-4 md:mt-0  md:w-auto center-on-885 form-wrapper-885">
-          <form className="flex items-center bg-input rounded-md w-full sm:w-[90%] md:w-64 px-2 py-1 max-w-full transition-all duration-300">
+        <div className="flex flex-row">
+          <form className="flex items-center bg-input rounded-md border border-red-600 px-3 py-2 form">
             <input
               type="text"
               placeholder="What are you looking for?"
               aria-label="Search"
-              className="w-full px-2 py-1 bg-transparent outline-none text-sm sm:text-base"
+              className="flex-1 bg-transparent outline-none text-sm placeholder-gray-500 "
             />
-            <img
-              src={searchIcon}
-              alt="Search Icon"
-              className="w-4 h-4 sm:w-5 sm:h-5"
-            />
+            <button type="submit">
+              <img
+                src={searchIcon}
+                alt="Search"
+                className="w-4 h-4 ml-2 search-icon"
+              />
+            </button>
           </form>
+          <div className="icon-box flex gap-2">
+            <button type="submit">
+              <img src={searchIcon} alt="Search" className="w-4 h-4 ml-2" />
+            </button>
+            <button type="submit">
+              <img src={searchIcon} alt="Search" className="w-4 h-4 ml-2" />
+            </button>
+          </div>
 
-          <div className="flex gap-4 items-center">
-            <img
-              src={loveIcon}
-              alt="Love Icon"
-              className="w-4 h-4 sm:w-5 sm:h-5"
-            />
-            <img
-              src={cartIcon}
-              alt="Basket Icon"
-              className="w-4 h-4 sm:w-6 sm:h-6"
-            />
+          <div className="flex gap-3 items-center icon-box1">
+            <img src={loveIcon} alt="Love Icon" className="w-4 h-4" />
+            <img src={cartIcon} alt="Basket Icon" className="w-4 h-4 " />
           </div>
         </div>
       </section>

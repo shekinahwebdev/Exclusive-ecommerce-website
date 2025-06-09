@@ -15,23 +15,23 @@ const CathegorySideBar = () => {
   ];
 
   return (
-    <div className="md:border-r border-r-text1">
-      <div className="md:hidden flex justify-between items-center p-4">
+    <div className="border-r border-r-text1">
+      <div className="flex justify-between items-center p-4">
         <h2 className="text-lg font-semibold">Categories</h2>
-        <button onClick={() => setIsOpen(!isOpen)} className="text-xl">
+        <button onClick={() => setIsOpen(!isOpen)} className="">
           ☰
         </button>
       </div>
       <nav
-        className={`flex-col w-full md:w-[300px] mt-4 md:mt-20 ${
+        className={`flex-col w-full  ${
           isOpen ? "flex" : "hidden"
-        } md:flex nav-cathegory`}
+        }  nav-cathegory`}
       >
         {categories.map((cathegory, index) => (
           <li key={index} className="list-none">
             <a
               href="#"
-              className="p-3 flex items-center justify-between hover:bg-gray-100"
+              className="p-3 flex items-center justify-between hover:bg-gray-100 text-[16px]"
             >
               {cathegory}
               <svg

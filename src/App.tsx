@@ -1,3 +1,4 @@
+import CathegorySideBar from "./components/CathegorySidebar";
 import FlashSales from "./components/FlashSales";
 import MainItems from "./components/MainItems";
 import NavBar from "./components/NavBar";
@@ -7,6 +8,7 @@ const App = () => {
     <div className="">
       <NavBar />
       <ShopSection />
+      <CathegorySideBar />
       <FlashSales />
       <MainItems />
     </div>

@@ -5,36 +5,38 @@ import iphone from "/assets/iphone.png";
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="bg-black text-white flex flex-col md:flex-row items-center p-8 md:p-12 lg:p-20 max-w-7xl mx-auto justify-between my-8 md:my-20 rounded-lg overflow-hidden">
-      <div className="flex flex-col flex-1 text-center md:text-left mb-8 md:mb-0 pt-2.5">
-        <div className="flex items-center gap-2 justify-center md:justify-start">
+    <section className="bg-black text-white flex flex-col w-full">
+      <div className="flex flex-col flex-1 w-full  p-9 ">
+        <div className="flex items-center gap-6">
           <img
             src={apple}
             alt="Apple"
-            className="w-[30px] h-[30px] object-contain"
+            className="w-[40px] h-[49px] object-contain"
           />
-          <h2 className="text-base sm:text-lg font-semibold">
-            iPhone 14 Series
-          </h2>
+          <h2 className="text-[16px] font-semibold">iPhone 14 Series</h2>
         </div>
-        <p className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl mt-3 font-bold leading-none">
-          Up to 10%
-          <br className="sm:hidden" /> off Voucher
+        <p className="text-4xl tracking-wider leading-snug">
+          Up to 10% off Voucher
         </p>
-        <a
-          href="#"
-          className="inline-flex items-center gap-1.5 w-fit mx-auto md:mx-0 mt-6 md:mt-10 underline text-lg font-medium hover:text-gray-300 transition-colors duration-200"
-        >
+        <a href="#" className=" flex text-[16px] items-center gap-1 mt-4">
           Shop Now
-          <img src={arrow} alt="Arrow" className="w-5 h-5" />{" "}
+          <img src={arrow} alt="Arrow" className="w-6 h-6" />
         </a>
       </div>
-      <div className="flex-1 w-full flex justify-center">
+      <div className="image-containe">
         <img
           src={iphone}
           alt="Iphone"
-          className="max-w-full h-auto object-contain md:h-[360px] lg:h-[450px]" // Image scales responsively, max height on larger screens
+          className="" // Image scales responsively, max height on larger screens
         />
+      </div>
+
+      <div className="flex mt-4 justify-center gap-3">
+        <div className="h-3 w-3 rounded-[50%] bg-emerald-900"></div>
+        <div className="h-3 w-3 rounded-2xl bg-emerald-900"></div>
+        <div className="h-3 w-3 rounded-2xl bg-emerald-900"></div>
+        <div className="h-3 w-3 rounded-2xl bg-emerald-900"></div>
+        <div className="h-3 w-3 rounded-2xl bg-emerald-900"></div>
       </div>
     </section>
   );
