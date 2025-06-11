@@ -3,6 +3,7 @@ import ShopSection from "../components/ui/ShopSection";
 import CathegorySideBar from "../components/ui/CathegorySidebar";
 import MainItems from "../components/ui/MainItems";
 import FlashSales from "../components/ui/FlashSales";
+import { Cathegory } from "../components/ui/Cathegory";
 
 const HomePage = () => {
   return (
@@ -17,6 +18,8 @@ const HomePage = () => {
           View all Product
         </button>
       </div>
+
+      <Cathegory />
     </div>
   );
 };
