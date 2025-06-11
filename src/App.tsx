@@ -11,6 +11,11 @@ const App = () => {
       <CathegorySideBar />
       <FlashSales />
       <MainItems />
+      <div className="flex justify-center">
+        <button className="bg-secondary2 px-15 py-3 rounded-md text-white">
+          View all Product
+        </button>
+      </div>
     </div>
   );
 };

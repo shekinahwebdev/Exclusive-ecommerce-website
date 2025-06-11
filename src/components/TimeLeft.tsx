@@ -1,7 +1,7 @@
 import rightArrow from "/assets/right-arrow-2.png";
 import leftArrow from "/assets/arrow-left.png";
 
-const TimeLife = () => {
+const TimeLeft = () => {
   return (
     <div className="mt-3 pr-2">
       <div className="flex justify-between">
@@ -41,4 +41,4 @@ const TimeLife = () => {
   );
 };
 
-export default TimeLife;
+export default TimeLeft;

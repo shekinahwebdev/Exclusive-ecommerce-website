@@ -31,7 +31,7 @@ const CathegorySideBar = () => {
           <li key={index} className="list-none">
             <a
               href="#"
-              className="p-3 flex items-center justify-between hover:bg-gray-100 text-[16px]"
+              className="flex items-center justify-between hover:bg-gray-100 text-[16px]"
             >
               {cathegory}
               <svg
