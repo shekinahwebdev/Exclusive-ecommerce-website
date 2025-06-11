@@ -31,12 +31,12 @@ const HeroSection: React.FC = () => {
         />
       </div>
 
-      <div className="flex mt-4 justify-center gap-3">
-        <div className="h-3 w-3 rounded-[50%] bg-emerald-900"></div>
-        <div className="h-3 w-3 rounded-2xl bg-emerald-900"></div>
-        <div className="h-3 w-3 rounded-2xl bg-emerald-900"></div>
-        <div className="h-3 w-3 rounded-2xl bg-emerald-900"></div>
-        <div className="h-3 w-3 rounded-2xl bg-emerald-900"></div>
+      <div className="flex my-4 justify-center gap-3">
+        <div className="h-3 w-3 rounded-[50%] bg-text1"></div>
+        <div className="h-3 w-3 rounded-2xl bg-text1"></div>
+        <div className="h-3 w-3 rounded-2xl bg-text1"></div>
+        <div className="h-3 w-3 rounded-2xl bg-text1"></div>
+        <div className="h-3 w-3 rounded-2xl bg-text1"></div>
       </div>
     </section>
   );

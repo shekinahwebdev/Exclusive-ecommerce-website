@@ -5,9 +5,9 @@ import star from "/assets/star.png";
 interface ProductCardProps {
   imageSrc: string;
   title: string;
-  price: string;
-  rate: string;
-  initialPrice?: string;
+  price: number;
+  rate: number;
+  initialPrice: number;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
@@ -18,7 +18,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   rate,
 }) => {
   return (
-    <div className="max-w-[270px] w-full border rounded-md overflow-hidden bg-white shadow-md relative">
+    <div className="max-w-[270px] w-full rounded-md overflow-hidden bg-white shadow-md relative">
       <div className="relative bg-text p-4 h-[240px] flex flex-col justify-between">
         {/* Top Row */}
         <div className="flex justify-between">

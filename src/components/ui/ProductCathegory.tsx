@@ -1,4 +1,7 @@
-import jacket from "/assets/jacket.jpg";
+import jacket from "/assets/jacket1.png";
+import bag from "/assets/bag.png";
+import cooler from "/assets/cpu-cooler.png";
+import bookshelf from "/assets/bookshelf.png";
 import ItemCard from "./ItemCard";
 
 const ProductCathegory = () => {
@@ -17,46 +20,32 @@ const ProductCathegory = () => {
       <div className="flex flex-wrap gap-6 justify-center items-start mt-10">
         <ItemCard
           imageSrc={jacket}
-          title="HAVIT HV-G92 Gamepad"
-          price="120"
-          initialPrice="123"
-          rate="88"
+          title="The north coat"
+          price={260}
+          initialPrice={360}
+          rate={65}
         />
         <ItemCard
-          imageSrc={jacket}
-          title="HAVIT HV-G92 Gamepad"
-          price="120"
-          initialPrice="123"
-          rate="88"
+          imageSrc={bag}
+          title="Gucci duffle bag"
+          price={960}
+          initialPrice={1160}
+          rate={65}
         />
         <ItemCard
-          imageSrc={jacket}
-          title="HAVIT HV-G92 Gamepad"
-          price="120"
-          initialPrice="123"
-          rate="88"
+          imageSrc={cooler}
+          title="RGB liquid CPU Cooler"
+          price={160}
+          initialPrice={170}
+          rate={65}
         />
         <ItemCard
-          imageSrc={jacket}
-          title="HAVIT HV-G92 Gamepad"
-          price="120"
-          initialPrice="123"
-          rate="88"
+          imageSrc={bookshelf}
+          title="Small BookSelf"
+          price={360}
+          initialPrice={300}
+          rate={65}
         />
-        <ItemCard
-          imageSrc={jacket}
-          title="HAVIT HV-G92 Gamepad"
-          price="120"
-          initialPrice="123"
-          rate="88"
-        />{" "}
-        <ItemCard
-          imageSrc={jacket}
-          title="HAVIT HV-G92 Gamepad"
-          price="120"
-          initialPrice="123"
-          rate="88"
-        />{" "}
       </div>
     </main>
   );

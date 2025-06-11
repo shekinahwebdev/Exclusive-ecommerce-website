@@ -1,4 +1,5 @@
 import { useState } from "react";
+import option from "/assets/option.png";
 
 const CathegorySideBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,15 +16,15 @@ const CathegorySideBar = () => {
   ];
 
   return (
-    <div className="border-r border-r-text1">
+    <div className="border-r border-r-text1 mb-3">
       <div className="flex justify-between items-center p-4">
         <h2 className="text-lg font-semibold">Categories</h2>
         <button onClick={() => setIsOpen(!isOpen)} className="">
-          ☰
+          <img src={option} alt="toggle" className="w-4 h-4" />
         </button>
       </div>
       <nav
-        className={`flex-col w-full  ${
+        className={`flex-col w-fit mx-3 gap-3 ${
           isOpen ? "flex" : "hidden"
         }  nav-cathegory`}
       >
@@ -31,7 +32,7 @@ const CathegorySideBar = () => {
           <li key={index} className="list-none">
             <a
               href="#"
-              className="flex items-center justify-between hover:bg-gray-100 text-[16px]"
+              className="flex  justify-between gap-64 hover:bg-gray-100 text-[16px]"
             >
               {cathegory}
               <svg

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import vector from "/assets/arrow2.png";
 import searchIcon from "/assets/search-icon.png";
+import option from "/assets/option.png";
 import loveIcon from "/assets/love-icon.png";
 import cartIcon from "/assets/cart.png";
 
@@ -96,7 +97,7 @@ const NavBar = () => {
               <img src={searchIcon} alt="Search" className="w-4 h-4 ml-2" />
             </button>
             <button type="submit">
-              <img src={searchIcon} alt="Search" className="w-4 h-4 ml-2" />
+              <img src={option} alt="Search" className="w-4 h-4 ml-2" />
             </button>
           </div>
 

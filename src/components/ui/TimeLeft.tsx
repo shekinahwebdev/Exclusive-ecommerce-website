@@ -10,12 +10,12 @@ const TimeLeft = () => {
           <img
             src={leftArrow}
             alt="left-icon"
-            className="bg-red-600 w-8 h-8 p-2.5 rounded-full  cursor-pointer hover:bg-secondary2 transition-all duration-300 "
+            className="bg-text w-8 h-8 p-2.5 rounded-full  cursor-pointer hover:bg-secondary2 transition-all duration-300 "
           />
           <img
             src={rightArrow}
             alt="right-icon"
-            className="bg-red-600 w-8 h-8 p-2.5 rounded-full  cursor-pointer hover:bg-secondary2 transition-all duration-300 "
+            className="bg-text w-8 h-8 p-2.5 rounded-full  cursor-pointer hover:bg-secondary2 transition-all duration-300 "
           />
         </div>
       </div>

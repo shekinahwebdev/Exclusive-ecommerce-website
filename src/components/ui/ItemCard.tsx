@@ -5,9 +5,9 @@ import star from "/assets/star.png";
 interface ItemCardProps {
   imageSrc: string;
   title: string;
-  price: string;
-  rate: string;
-  initialPrice?: string;
+  price: number;
+  rate: number;
+  initialPrice?: number;
 }
 
 const ItemCard: React.FC<ItemCardProps> = ({
@@ -18,8 +18,8 @@ const ItemCard: React.FC<ItemCardProps> = ({
   rate,
 }) => {
   return (
-    <div className="max-w-[270px] w-full border rounded-md overflow-hidden bg-white shadow-md relative">
-      <div className="relative  bg-red-500 p-4 w-[100%] h-[240px] flex flex-col">
+    <div className="max-w-[270px] w-full  rounded-md overflow-hidden bg-white shadow-md relative">
+      <div className="relative  bg-text p-4 w-[100%] h-[240px] flex flex-col">
         <div className="flex flex-col gap-2 items-end-safe">
           <img src={heart} alt="Heart Icon" className="w-6 h-6" />
           <img src={eye} alt="Eye Icon" className="w-6 h-6" />
