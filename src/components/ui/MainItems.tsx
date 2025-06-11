@@ -34,13 +34,20 @@ const MainItems = () => {
         initialPrice="123"
         rate="88"
       />
-      {/* <ProductCard
+      <ProductCard
         imageSrc={chair}
         title="HAVIT HV-G92 Gamepad"
         price="120"
         initialPrice="123"
         rate="88"
-      /> */}
+      />
+      <ProductCard
+        imageSrc={chair}
+        title="HAVIT HV-G92 Gamepad"
+        price="120"
+        initialPrice="123"
+        rate="88"
+      />
     </section>
   );
 };

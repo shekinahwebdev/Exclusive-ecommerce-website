@@ -1,28 +1,18 @@
-import React from "react";
-import phone from "/assets/mic.png";
+interface DevicesProps {
+  imageSrc: string;
+  name: string;
+  id: number;
+}
 
-const categories = [
-  { id: 1, name: "iPhone" },
-  { id: 2, name: "iPhone" },
-  { id: 3, name: "iPhone" },
-  { id: 4, name: "iPhone" },
-  { id: 5, name: "iPhone" },
-  { id: 6, name: "iPhone" },
-];
-
-const Devices = () => {
+const Devices: React.FC<DevicesProps> = ({ imageSrc, name, id }) => {
   return (
-    <section className="flex flex-wrap gap-4">
-      {categories.map((item) => (
-        <div
-          key={item.id}
-          className="border-2 flex items-center justify-center flex-col w-[170px] h-[145px]"
-        >
-          <img src={phone} alt="device" className="w-[56px] h-[56px]" />
-          <p>{item.name}</p>
-        </div>
-      ))}
-    </section>
+    <div
+      key={id}
+      className="border-2 flex items-center justify-center flex-col w-[170px] h-[145px]"
+    >
+      <img src={imageSrc} alt="device" className="w-[56px] h-[56px]" />
+      <p className="mt-2">{name}</p>
+    </div>
   );
 };
 
