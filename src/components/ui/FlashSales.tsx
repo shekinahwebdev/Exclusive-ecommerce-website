@@ -1,4 +1,5 @@
-import TimeLife from "./TimeLife";
+import TimeLeft from "./TimeLeft";
+
 const FlashSales = () => {
   return (
     <main className="pl-2">
@@ -6,7 +7,7 @@ const FlashSales = () => {
         <div className="h-[40px] w-[20px] bg-secondary2 rounded-[5px]"></div>
         <p className="text-secondary2 text-[16px]">Today's</p>
       </div>
-      <TimeLife />
+      <TimeLeft />
     </main>
   );
 };
