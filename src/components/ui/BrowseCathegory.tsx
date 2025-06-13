@@ -31,8 +31,8 @@ export const BrowseCathegory = () => {
         </div>
       </div>
       <section className="flex flex-wrap gap-4 mt-10 justify-center-safe">
-        <Devices id={2} imageSrc={phone} name="Phones" />
-        <Devices id={1} imageSrc={imac} name="Computers" />
+        <Devices id={1} imageSrc={phone} name="Phones" />
+        <Devices id={2} imageSrc={imac} name="Computers" />
         <Devices id={3} imageSrc={watch} name="SmartWatch" />
         <Devices id={4} imageSrc={camera} name="Camera" />
         <Devices id={5} imageSrc={headphone} name="HeadPhones" />
