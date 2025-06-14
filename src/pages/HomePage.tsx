@@ -9,6 +9,7 @@ import { ProductContext } from "../context/homepagecontext";
 import { useState } from "react";
 import LimitedTimeOffer from "../components/ui/LimitedTimeOffer";
 import speaker from "/assets/speaker.png";
+import MainProducts from "../components/ui/MainProducts";
 
 const HomePage = () => {
   const [products] = useState([
@@ -76,6 +77,7 @@ const HomePage = () => {
           buttonText="Buy Now!"
           imageSrc={speaker}
         />
+        <MainProducts />
       </div>
     </ProductContext.Provider>
   );

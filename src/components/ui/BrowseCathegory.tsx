@@ -8,6 +8,39 @@ import camera from "/assets/camera.png";
 import headphone from "/assets/headphone.png";
 import game from "/assets/games.png";
 
+const devicesData = [
+  {
+    id: 1,
+    imageSrc: phone,
+    name: "Phones",
+  },
+  {
+    id: 2,
+    imageSrc: imac,
+    name: "Computers",
+  },
+  {
+    id: 3,
+    imageSrc: watch,
+    name: "SmartWatch",
+  },
+  {
+    id: 4,
+    imageSrc: camera,
+    name: "Camera",
+  },
+  {
+    id: 5,
+    imageSrc: headphone,
+    name: "HeadPhones",
+  },
+  {
+    id: 6,
+    imageSrc: game,
+    name: "Gaming",
+  },
+];
+
 export const BrowseCathegory = () => {
   return (
     <main className="px-2 py-10">
@@ -31,12 +64,14 @@ export const BrowseCathegory = () => {
         </div>
       </div>
       <section className="flex flex-wrap gap-4 mt-10 justify-center-safe">
-        <Devices id={1} imageSrc={phone} name="Phones" />
-        <Devices id={2} imageSrc={imac} name="Computers" />
-        <Devices id={3} imageSrc={watch} name="SmartWatch" />
-        <Devices id={4} imageSrc={camera} name="Camera" />
-        <Devices id={5} imageSrc={headphone} name="HeadPhones" />
-        <Devices id={6} imageSrc={game} name="Gaming" />
+        {devicesData.map((device) => (
+          <Devices
+            key={device.id}
+            id={device.id}
+            imageSrc={device.imageSrc}
+            name={device.name}
+          />
+        ))}
       </section>
     </main>
   );

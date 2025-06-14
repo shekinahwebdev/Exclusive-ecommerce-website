@@ -1,16 +1,9 @@
 import heart from "/assets/Fill Heart.png";
 import eye from "/assets/Fill Eye.png";
 import star from "/assets/star.png";
+import type { ProductCards } from "../../interface";
 
-interface ProductCardProps {
-  imageSrc: string;
-  title: string;
-  price: number;
-  rate: number;
-  initialPrice: number;
-}
-
-const ProductCard: React.FC<ProductCardProps> = ({
+const ProductCard: React.FC<ProductCards> = ({
   imageSrc,
   title,
   price,

@@ -1,16 +1,9 @@
 import heart from "/assets/Fill Heart.png";
 import eye from "/assets/Fill Eye.png";
 import star from "/assets/star.png";
+import type { ItemCards } from "../../interface";
 
-interface ItemCardProps {
-  imageSrc: string;
-  title: string;
-  price: number;
-  rate: number;
-  initialPrice?: number;
-}
-
-const ItemCard: React.FC<ItemCardProps> = ({
+const ItemCard: React.FC<ItemCards> = ({
   imageSrc,
   title,
   price,

@@ -1,10 +1,6 @@
-interface DevicesProps {
-  imageSrc: string;
-  name: string;
-  id: number;
-}
+import type { Device } from "../../interface/index";
 
-const Devices: React.FC<DevicesProps> = ({ imageSrc, name, id }) => {
+const Devices: React.FC<Device> = ({ imageSrc, name, id }) => {
   return (
     <div
       key={id}
