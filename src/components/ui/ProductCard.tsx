@@ -1,16 +1,9 @@
 import heart from "/assets/Fill Heart.png";
 import eye from "/assets/Fill Eye.png";
 import star from "/assets/star.png";
+import type { ProductCards } from "../../interface";
 
-interface ProductCardProps {
-  imageSrc: string;
-  title: string;
-  price: string;
-  rate: string;
-  initialPrice?: string;
-}
-
-const ProductCard: React.FC<ProductCardProps> = ({
+const ProductCard: React.FC<ProductCards> = ({
   imageSrc,
   title,
   price,
@@ -18,7 +11,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   rate,
 }) => {
   return (
-    <div className="max-w-[270px] w-full border rounded-md overflow-hidden bg-white shadow-md relative">
+    <div className="max-w-[270px] w-full rounded-md overflow-hidden bg-white shadow-md relative">
       <div className="relative bg-text p-4 h-[240px] flex flex-col justify-between">
         {/* Top Row */}
         <div className="flex justify-between">

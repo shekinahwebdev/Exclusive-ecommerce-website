@@ -1,21 +1,21 @@
-import rightArrow from "/assets/right-arrow-2.png";
-import leftArrow from "/assets/arrow-left.png";
+import rightArrow from "/assets/right-arrow-3.png";
+import leftArrow from "/assets/arrow-2.png";
 
 const TimeLeft = () => {
   return (
-    <div className="mt-3 pr-2">
+    <div className="mt-5 ">
       <div className="flex justify-between">
         <p className="font-bold text-[20px]">Flash Sales</p>
-        <div className="flex gap-2">
+        <div className="flex gap-3">
           <img
             src={leftArrow}
             alt="left-icon"
-            className="bg-text w-6 h-6  rounded-full  cursor-pointer hover:bg-secondary2 transition-all duration-300 p-2"
+            className="bg-text w-8 h-8 p-2.5 rounded-full  cursor-pointer hover:bg-secondary2 transition-all duration-300 "
           />
           <img
             src={rightArrow}
             alt="right-icon"
-            className="bg-text w-6 h-6 rounded-full  cursor-pointer hover:bg-secondary2 transition-all duration-300 p-2"
+            className="bg-text w-8 h-8 p-2.5 rounded-full  cursor-pointer hover:bg-secondary2 transition-all duration-300 "
           />
         </div>
       </div>
