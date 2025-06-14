@@ -1,7 +1,7 @@
 import React from "react";
-import type { LimitedTimeOffer } from "../../interface/index";
+import type { LimitedTimeOfferProps } from "../../interface/index";
 
-const LimitedTimeOffer: React.FC<LimitedTimeOffer> = ({
+const LimitedTimeOffer: React.FC<LimitedTimeOfferProps> = ({
   heading,
   subtitle,
   countdown,

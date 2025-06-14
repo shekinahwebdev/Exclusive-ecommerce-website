@@ -13,7 +13,7 @@ export interface Device {
   id: number;
 }
 
-export interface LimitedTimeOffer {
+export interface LimitedTimeOfferProps {
   heading: string;
   subtitle: string;
   countdown: {
