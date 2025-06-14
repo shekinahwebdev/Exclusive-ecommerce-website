@@ -5,6 +5,36 @@ import bookshelf from "/assets/bookshelf.png";
 import ItemCard from "./ItemCard";
 
 const ProductCathegory = () => {
+  const items = [
+    {
+      imageSrc: jacket,
+      title: "The north coat",
+      price: 260,
+      initialPrice: 360,
+      rate: 65,
+    },
+    {
+      imageSrc: bag,
+      title: "Gucci duffle bag",
+      price: 960,
+      initialPrice: 1160,
+      rate: 65,
+    },
+    {
+      imageSrc: cooler,
+      title: "RGB liquid CPU Cooler",
+      price: 160,
+      initialPrice: 170,
+      rate: 65,
+    },
+    {
+      imageSrc: bookshelf,
+      title: "Small BookSelf",
+      price: 360,
+      initialPrice: 300,
+      rate: 65,
+    },
+  ];
   return (
     <main className="px-2 py-10">
       <div className="flex items-center gap-4">
@@ -18,34 +48,16 @@ const ProductCathegory = () => {
         </button>
       </div>
       <div className="flex flex-wrap gap-6 justify-center items-start mt-10">
-        <ItemCard
-          imageSrc={jacket}
-          title="The north coat"
-          price={260}
-          initialPrice={360}
-          rate={65}
-        />
-        <ItemCard
-          imageSrc={bag}
-          title="Gucci duffle bag"
-          price={960}
-          initialPrice={1160}
-          rate={65}
-        />
-        <ItemCard
-          imageSrc={cooler}
-          title="RGB liquid CPU Cooler"
-          price={160}
-          initialPrice={170}
-          rate={65}
-        />
-        <ItemCard
-          imageSrc={bookshelf}
-          title="Small BookSelf"
-          price={360}
-          initialPrice={300}
-          rate={65}
-        />
+        {items.map((item, index) => (
+          <ItemCard
+            key={index}
+            imageSrc={item.imageSrc}
+            title={item.title}
+            price={item.price}
+            initialPrice={item.initialPrice}
+            rate={item.rate}
+          />
+        ))}
       </div>
     </main>
   );
