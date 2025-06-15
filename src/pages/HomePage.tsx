@@ -10,6 +10,7 @@ import { useState } from "react";
 import LimitedTimeOffer from "../components/ui/LimitedTimeOffer";
 import speaker from "/assets/speaker.png";
 import MainProducts from "../components/ui/MainProducts";
+import FeaturedProducts from "../components/ui/FeaturedProducts";
 
 const HomePage = () => {
   const [products] = useState([
@@ -78,6 +79,7 @@ const HomePage = () => {
           imageSrc={speaker}
         />
         <MainProducts />
+        <FeaturedProducts />
       </div>
     </ProductContext.Provider>
   );
