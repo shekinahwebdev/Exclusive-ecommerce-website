@@ -11,6 +11,8 @@ import LimitedTimeOffer from "../components/ui/LimitedTimeOffer";
 import speaker from "/assets/speaker.png";
 import MainProducts from "../components/ui/MainProducts";
 import FeaturedProducts from "../components/ui/FeaturedProducts";
+import Services from "../components/ui/Services";
+import { Footer } from "../components/ui/Footer";
 
 const HomePage = () => {
   const [products] = useState([
@@ -80,6 +82,8 @@ const HomePage = () => {
         />
         <MainProducts />
         <FeaturedProducts />
+        <Services />
+        <Footer />
       </div>
     </ProductContext.Provider>
   );
