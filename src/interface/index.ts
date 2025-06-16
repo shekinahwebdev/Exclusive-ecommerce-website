@@ -49,3 +49,9 @@ export interface MainProductItem {
   initialPrice?: number;
   rate: number;
 }
+
+export interface ServiceType {
+  imageSrc: string;
+  title: string;
+  description: string;
+}
