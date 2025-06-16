@@ -5,7 +5,7 @@ const WomenCollectionProduct = () => {
     <div className="bg-text2 text-text rounded-[4px] pt-4 px-3">
       <div className="flex flex-col items-start gap-4 w-[255px]">
         <h3 className="text-2xl font-bold">Women's Collections</h3>
-        <p className="text-sm">
+        <p className="text-sm leading-5">
           Featured woman collections that give you another vibe.
         </p>
         <a href="#" className="text-text">
