@@ -2,6 +2,7 @@ import React from "react";
 import PlayStationProduct from "./PlayStationProduct";
 import WomenCollectionProduct from "./WomenCollectionProduct";
 import SpeakerProduct from "./SpeakerProduct";
+import { PerfumeProduct } from "./PerfumeProduct";
 
 const FeaturedProducts = () => {
   return (
@@ -14,6 +15,7 @@ const FeaturedProducts = () => {
       <PlayStationProduct />
       <WomenCollectionProduct />
       <SpeakerProduct />
+      <PerfumeProduct />
     </section>
   );
 };
