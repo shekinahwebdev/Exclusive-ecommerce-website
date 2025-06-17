@@ -39,17 +39,29 @@ const devicesData = [
     imageSrc: game,
     name: "Gaming",
   },
+  {
+    id: 7,
+    imageSrc: game,
+    name: "Gaming",
+  },
+  {
+    id: 8,
+    imageSrc: game,
+    name: "Gaming",
+  },
 ];
 
 export const BrowseCathegory = () => {
   return (
-    <main className="px-2 py-10">
+    <main className="px-2 py-10 md:px-30">
       <div className="flex items-center gap-4">
         <div className="h-[40px] w-[20px] bg-secondary2 rounded-[5px]"></div>
         <p className="text-secondary2 text-[16px]">Cathegories</p>
       </div>
       <div className="flex justify-between items-center">
-        <p className="font-bold text-[20px] mt-5">Browse By Cathegory</p>
+        <p className="font-bold text-[20px] mt-5 md:text-3xl">
+          Browse By Cathegory
+        </p>
         <div className="flex gap-3">
           <img
             src={leftArrow}
@@ -63,7 +75,7 @@ export const BrowseCathegory = () => {
           />
         </div>
       </div>
-      <section className="flex flex-wrap gap-4 mt-10 justify-center-safe">
+      <section className="flex flex-wrap gap-4 mt-10 justify-center-safe md:items-start-safe md:flex-nowrap md:gap-10">
         {devicesData.map((device) => (
           <Devices
             key={device.id}

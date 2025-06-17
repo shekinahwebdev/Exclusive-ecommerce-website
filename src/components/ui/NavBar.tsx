@@ -20,16 +20,16 @@ const NavBar = () => {
   const languages = ["English", "French", "Spanish", "German"];
 
   return (
-    <main>
+    <main className="flex flex-col">
       <div
         className="text-white bg-black flex flex-row
-       justify-between  items-center gap-3 p-5 text-[17px]"
+       justify-between  items-center gap-3 p-5 text-[17px]  md:px-20"
       >
         <p className="text-[10px]">
           Summer Sale For All Swim Suits - OFF 50%!
-          <span className="pl-1 font-bold underline cursor-pointer">
-            ShopNow
-          </span>
+          <a className="font-bold cursor-pointer list-none">
+            <li>ShopNow</li>
+          </a>
         </p>
         <div className="relative">
           <div
@@ -63,11 +63,10 @@ const NavBar = () => {
         </div>
       </div>
 
-      <section className="flex flex-row justify-between gap-3.5 p-2">
-        <h2 className="">Exclusive</h2>
-
-        <div className="hidden">
-          <nav className="flex flex-row items-center gap-3 md:flex-row md:gap-6 text-[20px]">
+      <section className="flex flex-row justify-between gap-3.5 p-2 md:px-20 md:border-1 md:py-5">
+        <h2 className="md:text-2xl">Exclusive</h2>
+        <div className="hidden md:flex">
+          <nav className="flex flex-row items-center gap-3 md:flex-row md:gap-10 text-[20px]">
             {navLinks.map((link, index) => (
               <a key={index} href={link.href} className="hover:underline">
                 {link.name}
@@ -77,7 +76,7 @@ const NavBar = () => {
         </div>
 
         <div className="flex flex-row">
-          <form className="flex items-center bg-input rounded-md border border-red-600 px-3 py-2 form">
+          <form className="flex items-center bg-input rounded-md px-3 py-2 hidden md:flex">
             <input
               type="text"
               placeholder="What are you looking for?"
@@ -94,16 +93,24 @@ const NavBar = () => {
           </form>
           <div className="icon-box flex gap-2">
             <button type="submit">
-              <img src={searchIcon} alt="Search" className="w-4 h-4 ml-2" />
+              <img
+                src={searchIcon}
+                alt="Search"
+                className="w-4 h-4 ml-2 md:hidden"
+              />
             </button>
             <button type="submit">
-              <img src={option} alt="Search" className="w-4 h-4 ml-2" />
+              <img
+                src={option}
+                alt="Search"
+                className="w-4 h-4 ml-2 md:hidden"
+              />
             </button>
           </div>
 
-          <div className="flex gap-3 items-center icon-box1">
-            <img src={loveIcon} alt="Love Icon" className="w-4 h-4" />
-            <img src={cartIcon} alt="Basket Icon" className="w-4 h-4 " />
+          <div className="flex gap-3 items-center hidden md:flex">
+            <img src={loveIcon} alt="Love Icon" className="w-5 h-5" />
+            <img src={cartIcon} alt="Basket Icon" className="w-5 h-5 " />
           </div>
         </div>
       </section>

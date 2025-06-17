@@ -29,7 +29,7 @@ export const Footer = () => {
     { name: linkedInIcon, href: "#" },
   ];
   return (
-    <section className="bg-text2 text-text pl-4 py-10">
+    <section className="bg-text2 text-text pl-4 py-10 flex flex-col md:p-30 md:flex md:flex-row  md:justify-evenly md:gap-20">
       <div className="flex flex-col gap-4">
         <h1 className="text-2xl">Exclusive</h1>
         <p className="text-xl">Subscribe</p>
@@ -46,36 +46,36 @@ export const Footer = () => {
         </form>
       </div>
 
-      <div className="mt-10 flex flex-col gap-4">
-        <h1 className="text-xl">Support</h1>
+      <div className="mt-10 flex flex-col gap-4 md:mt-0 md:gap-6">
+        <h1 className="text-xl md:text-2xl">Support</h1>
         <p>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh</p>
         <p>exclusive@gmail.com</p>
         <p>+88015-88888-9999</p>
       </div>
 
-      <div className="flex flex-col gap-2 mt-10 ml-10">
+      <div className="flex flex-col gap-2 mt-10 ml-10 md:ml-0 md:mt-0">
         <h1 className="text-2xl">Account</h1>
         <ul className="list-none flex flex-col gap-4">
-          {links.map((link) => (
-            <a href={link.href}>
-              <li>{link.name}</li>
-            </a>
+          {links.map((link, index) => (
+            <li key={index}>
+              <a href={link.href}>{link.name}</a>
+            </li>
           ))}
         </ul>
       </div>
 
-      <div className="flex flex-col gap-2 mt-10 ml-10">
+      <div className="flex flex-col gap-2 mt-10 ml-10 md:mt-0">
         <h1 className="text-2xl">Quick Link</h1>
         <ul className="list-none flex flex-col gap-4">
-          {socialLinks.map((link) => (
-            <a href={link.href}>
-              <li>{link.name}</li>
-            </a>
+          {socialLinks.map((link, index) => (
+            <li key={index}>
+              <a href={link.href}>{link.name}</a>
+            </li>
           ))}
         </ul>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-10 md:mt-0">
         <h1 className="text-2xl mb-5">Download App</h1>
         <span className="text-text1">Save $3 with App New User Only</span>
         <div className="flex gap-2 mt-2">
@@ -85,18 +85,21 @@ export const Footer = () => {
             <img src={appStore} alt="app-store" />
           </div>
         </div>
-      </div>
-
-      <div className="mt-5">
-        <ul className="list-none flex gap-3">
-          {socialIcons.map((icon) => (
-            <a href="#">
-              <li>
-                <img src={icon.name} className="w-6 h-6 inline-block mr-2" />
+        <div className="mt-5">
+          <ul className="list-none flex gap-3">
+            {socialIcons.map((icon, index) => (
+              <li key={index}>
+                <a href={icon.href}>
+                  <img
+                    src={icon.name}
+                    alt=""
+                    className="w-6 h-6 inline-block mr-2"
+                  />
+                </a>
               </li>
-            </a>
-          ))}
-        </ul>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

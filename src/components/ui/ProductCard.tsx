@@ -13,7 +13,6 @@ const ProductCard: React.FC<ProductCards> = ({
   return (
     <div className="max-w-[270px] w-full rounded-md overflow-hidden bg-white shadow-md relative">
       <div className="relative bg-text p-4 h-[240px] flex flex-col justify-between">
-        {/* Top Row */}
         <div className="flex justify-between">
           <div className="w-20 h-8 bg-secondary2 text-center text-[16px] rounded text-text flex items-center justify-center">
             -40%
@@ -23,8 +22,6 @@ const ProductCard: React.FC<ProductCards> = ({
             <img src={eye} alt="Eye Icon" className="w-6 h-6" />
           </div>
         </div>
-
-        {/* Product Image */}
         <div className="flex justify-center items-center h-full">
           <img
             src={imageSrc}
@@ -33,8 +30,6 @@ const ProductCard: React.FC<ProductCards> = ({
           />
         </div>
       </div>
-
-      {/* Text Content */}
       <div className="p-4 text-[15px]">
         <p className="font-medium">{title}</p>
         <p className="mt-2 flex gap-2 text-secondary2 font-semibold">

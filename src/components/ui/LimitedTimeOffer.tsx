@@ -9,12 +9,14 @@ const LimitedTimeOffer: React.FC<LimitedTimeOfferProps> = ({
   imageSrc,
 }) => {
   return (
-    <div className="bg-text2 text-text mt-20 py-2">
+    <div className="bg-text2 text-text mt-20 py-2 md:mx-30 md:flex md:p-20">
       <div className="px-2">
-        <p className="text-button1 text-[20px] font-extrabold">{heading}</p>
-        <p className="text-4xl pr-20 leading-15">{subtitle}</p>
+        <p className="text-button1 text-[20px] font-extrabold md:text-3xl">
+          {heading}
+        </p>
+        <p className="text-4xl pr-20 leading-15 md:text-5xl">{subtitle}</p>
 
-        <div className="flex gap-5  py-10 text-text2">
+        <div className="flex gap-5  py-10 text-text2 md:gap-10">
           <div className="w-[70px] h-[70px] rounded-full flex flex-col items-center justify-center bg-text">
             <span className="text-[16px] font-extrabold">
               {countdown.hours}
@@ -39,7 +41,7 @@ const LimitedTimeOffer: React.FC<LimitedTimeOfferProps> = ({
           </div>
         </div>
 
-        <button className="bg-button1 px-10 py-2 rounded-[4px] mt-7">
+        <button className="bg-button1 px-10 py-2 rounded-[4px] mt-7 md:py-4 md:px-12">
           {buttonText}
         </button>
       </div>
@@ -47,7 +49,7 @@ const LimitedTimeOffer: React.FC<LimitedTimeOfferProps> = ({
       <img
         src={imageSrc}
         alt="Offer Product"
-        className="w-full h-auto mt-30 mb-5"
+        className="w-full h-auto mt-30 mb-5 md:w-[600px]"
       />
     </div>
   );

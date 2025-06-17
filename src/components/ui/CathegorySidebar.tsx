@@ -16,15 +16,15 @@ const CathegorySideBar = () => {
   ];
 
   return (
-    <div className="border-r border-r-text1 mb-3">
-      <div className="flex justify-between items-center p-4">
-        <h2 className="text-lg font-semibold">Categories</h2>
+    <div className="border-r border-r-text1 mb-3 md:w-[25%]">
+      <div className="flex justify-between p-4">
+        <h2 className="text-lg font-semibold md:text-2xl">Categories</h2>
         <button onClick={() => setIsOpen(!isOpen)} className="">
           <img src={option} alt="toggle" className="w-4 h-4" />
         </button>
       </div>
       <nav
-        className={`flex-col w-fit mx-3 gap-3 ${
+        className={`flex-col w-fit mx-3 gap-3 md:gap-10 ${
           isOpen ? "flex" : "hidden"
         }  nav-cathegory`}
       >

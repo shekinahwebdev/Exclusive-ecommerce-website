@@ -34,9 +34,23 @@ const ProductCathegory = () => {
       initialPrice: 300,
       rate: 65,
     },
+    {
+      imageSrc: bookshelf,
+      title: "Small BookSelf",
+      price: 360,
+      initialPrice: 300,
+      rate: 65,
+    },
+    {
+      imageSrc: bookshelf,
+      title: "Small BookSelf",
+      price: 360,
+      initialPrice: 300,
+      rate: 65,
+    },
   ];
   return (
-    <main className="px-2 py-10">
+    <main className="px-2 py-10 md:px-30">
       <div className="flex items-center gap-4">
         <div className="h-[40px] w-[20px] bg-secondary2 rounded-[5px]"></div>
         <p className="text-secondary2 text-[16px]">This month</p>
@@ -47,7 +61,7 @@ const ProductCathegory = () => {
           View All
         </button>
       </div>
-      <div className="flex flex-wrap gap-6 justify-center items-start mt-10">
+      <div className="flex flex-wrap gap-6 justify-center items-start mt-10 md:flex-nowrap">
         {items.map((item, index) => (
           <ItemCard
             key={index}

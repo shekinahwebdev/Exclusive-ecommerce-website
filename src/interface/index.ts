@@ -55,3 +55,10 @@ export interface ServiceType {
   title: string;
   description: string;
 }
+
+export interface NewProductItem {
+  imageSrc: string;
+  title: string;
+  price: number;
+  rate: number;
+}
