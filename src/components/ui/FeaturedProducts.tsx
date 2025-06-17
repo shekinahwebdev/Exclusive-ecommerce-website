@@ -1,4 +1,3 @@
-import React from "react";
 import PlayStationProduct from "./PlayStationProduct";
 import WomenCollectionProduct from "./WomenCollectionProduct";
 import SpeakerProduct from "./SpeakerProduct";

@@ -4,7 +4,12 @@ import camera1 from "/assets/camera1.png";
 import snack from "/assets/snack.png";
 import product from "/assets/product.png";
 import gaminglaptop from "/assets/gaminglaptop.png";
+import car from "/assets/New-Mercede.png";
+import controller from "/assets/gameController.png";
+import boots from "/assets/boots.png";
+import jacket from "/assets/satin-jacket.png";
 import MainProductItems from "./MainProductItems";
+import NewProductItems from "./NewProductItems";
 
 const MainProducts = () => {
   const items = [
@@ -35,6 +40,33 @@ const MainProducts = () => {
       price: 500,
       initialPrice: 300,
       rate: 145,
+    },
+  ];
+
+  const moreItems = [
+    {
+      imageSrc: car,
+      title: "Kids Electric Car",
+      price: 960,
+      rate: 65,
+    },
+    {
+      imageSrc: controller,
+      title: "Jr. Zoom Soccer Cleats",
+      price: 1160,
+      rate: 35,
+    },
+    {
+      imageSrc: boots,
+      title: "GP11 Shooter USB Gamepad",
+      price: 660,
+      rate: 55,
+    },
+    {
+      imageSrc: jacket,
+      title: "Quilted Satin Jacket",
+      price: 660,
+      rate: 55,
     },
   ];
   return (
@@ -70,8 +102,22 @@ const MainProducts = () => {
               rate={item.rate}
             />
           ))}
+          {moreItems.map((item, index) => (
+            <NewProductItems
+              key={index}
+              imageSrc={item.imageSrc}
+              title={item.title}
+              price={item.price}
+              rate={item.rate}
+            />
+          ))}
         </div>
       </section>
+      <div className="flex justify-center">
+        <button className="bg-secondary2 px-15 py-3 rounded-md text-white mt-10">
+          View all Product
+        </button>
+      </div>
     </main>
   );
 };
