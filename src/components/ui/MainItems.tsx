@@ -4,7 +4,7 @@ import { useHomePageContext } from "../../context/homepagecontext";
 const MainItems = () => {
   const products = useHomePageContext();
   return (
-    <section className="flex flex-wrap gap-6 justify-center items-start px-5 py-5">
+    <section className="flex flex-wrap gap-6 justify-center items-start px-5 py-5 md:pl-30 md:justify-start">
       {products.map((product, index) => (
         <ProductCard
           key={index}

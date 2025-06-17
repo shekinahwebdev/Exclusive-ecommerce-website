@@ -23,7 +23,7 @@ const Services = () => {
   ];
 
   return (
-    <main className="flex flex-col items-center justify-center gap-5 my-30">
+    <main className="flex flex-col items-center justify-center gap-5 my-30 md:flex-row md:justify-evenly">
       {services.map((service, index) => (
         <ServiceTypes
           key={index}

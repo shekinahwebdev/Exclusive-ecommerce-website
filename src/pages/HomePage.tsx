@@ -1,6 +1,5 @@
 import NavBar from "../components/ui/NavBar";
 import ShopSection from "../components/ui/ShopSection";
-import CathegorySideBar from "../components/ui/CathegorySidebar";
 import MainItems from "../components/ui/MainItems";
 import FlashSales from "../components/ui/FlashSales";
 import { BrowseCathegory } from "../components/ui/BrowseCathegory";
@@ -8,7 +7,7 @@ import ProductCathegory from "../components/ui/ProductCathegory";
 import { ProductContext } from "../context/homepagecontext";
 import { useState } from "react";
 import LimitedTimeOffer from "../components/ui/LimitedTimeOffer";
-import speaker from "/assets/speaker.png";
+import speaker from "/assets/speaker-1.png";
 import MainProducts from "../components/ui/MainProducts";
 import FeaturedProducts from "../components/ui/FeaturedProducts";
 import Services from "../components/ui/Services";
@@ -56,6 +55,14 @@ const HomePage = () => {
       initialPrice: 400,
       rate: 99,
     },
+    {
+      id: 6,
+      imageSrc: "/assets/chair.png",
+      title: "S-Series Comfort Chaird",
+      price: 375,
+      initialPrice: 400,
+      rate: 99,
+    },
   ]);
 
   return (
@@ -63,7 +70,6 @@ const HomePage = () => {
       <div className="">
         <NavBar />
         <ShopSection />
-        <CathegorySideBar />
         <FlashSales />
         <MainItems />
         <div className="flex justify-center">
