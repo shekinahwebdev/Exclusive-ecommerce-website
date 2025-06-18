@@ -53,7 +53,7 @@ const NavBar = () => {
                     setSelectedLang(lang);
                     setIsOpen(false);
                   }}
-                  className="px-4 py-2 hover:bg-red-500 cursor-pointer"
+                  className="px-4  py-2 cursor-pointer"
                 >
                   {lang}
                 </li>
