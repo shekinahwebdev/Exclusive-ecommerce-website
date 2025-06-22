@@ -4,7 +4,7 @@ import { MainLoginPage } from "../components/ui/MainLoginPage";
 
 const LoginPage = () => {
   return (
-    <div>
+    <div className="hidden">
       <Header />
       <MainLoginPage />
       <LoginPageFooter />
