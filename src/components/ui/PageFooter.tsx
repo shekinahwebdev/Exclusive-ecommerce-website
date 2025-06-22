@@ -6,7 +6,7 @@ import facebookIcon from "/assets/facebook.png";
 import twitterIcon from "/assets/twitter.png";
 import instagramIcon from "/assets/instagram.png";
 import linkedInIcon from "/assets/linkedIn.png";
-export const LoginPageFooter = () => {
+export const PageFooter = () => {
   const links = [
     { name: "My Account", href: "#" },
     { name: "Login / Register", href: "#" },
