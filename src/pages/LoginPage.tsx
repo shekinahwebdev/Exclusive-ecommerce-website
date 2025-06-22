@@ -1,13 +1,13 @@
 import { Header } from "../components/ui/Header";
-import { LoginPageFooter } from "../components/ui/LoginPageFooter";
 import { MainLoginPage } from "../components/ui/MainLoginPage";
+import { PageFooter } from "../components/ui/PageFooter";
 
 const LoginPage = () => {
   return (
     <div className="hidden">
       <Header />
       <MainLoginPage />
-      <LoginPageFooter />
+      <PageFooter />
     </div>
   );
 };
