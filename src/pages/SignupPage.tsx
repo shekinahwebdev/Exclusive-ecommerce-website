@@ -4,7 +4,7 @@ import { PageFooter } from "../components/ui/PageFooter";
 
 const SignUpPage = () => {
   return (
-    <div>
+    <div className="hidden">
       <Header />
       <MainSignupPage />
       <PageFooter />
