@@ -19,7 +19,7 @@ const NewProductItems: React.FC<NewProductItem> = ({
           </div>
           <div className="flex flex-col gap-3">
             <img src={heart} alt="Heart Icon" className="w-6 h-6" />
-            <img src={eye} alt="Eye Icon" className="w-6 h-6" />
+            <img src={eye} alt="Eye Icon" className="w-6 h-6" />P{" "}
           </div>
         </div>
         <div className="flex justify-center items-center h-full">
